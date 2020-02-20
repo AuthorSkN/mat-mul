@@ -5,8 +5,7 @@
 #define N	1024        // size of matrix is N*N
 #define BLOCK_SIZE  16
 
-__global__ void gpuMult ( float * a, float * b, int n, float * c )
-{
+__global__ void gpuMult ( float * a, float * b, int n, float * c ) {
     int   bx  = blockIdx.x;     
     int   by  = blockIdx.y;
     int   tx  = threadIdx.x;        
